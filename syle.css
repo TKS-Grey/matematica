@@ -89,16 +89,6 @@ button {
     box-shadow: 0 5px 15px rgba(155, 117, 232, .2);
 }
 
-button:hover:not(:disabled) {
-    transform: translateY(-3px);
-    background: linear-gradient(135deg, #b18cf5, #8969dc);
-    box-shadow: 0 8px 22px rgba(155, 117, 232, .3);
-}
-
-button:active:not(:disabled) {
-    transform: scale(.97);
-}
-
 button:disabled {
     opacity: .4;
     cursor: not-allowed;
@@ -107,10 +97,6 @@ button:disabled {
 .secundario {
     background: #49395e;
     box-shadow: none;
-}
-
-.secundario:hover:not(:disabled) {
-    background: #624b7d;
 }
 
 .formula,
@@ -179,7 +165,7 @@ button:disabled {
     font-size: 1.05rem;
 }
 
-/* ===== SECCIÓN GGB ===== */
+/* ===== SECCIÓN Geggebra (el profe permitio hacer esto con ia) ===== */
 .seccion-ggb {
     margin-top: 35px;
     padding: 28px;
@@ -196,25 +182,12 @@ button:disabled {
     margin-bottom: 12px;
 }
 
-.seccion-ggb > p,
-.visor > p {
-    color: #c1b4d8;
-    line-height: 1.6;
-    margin-bottom: 18px;
-}
-
 .zona-ggb {
     padding: 30px 15px;
     border: 2px dashed #8065aa;
     border-radius: 14px;
     background: #302746;
     transition: .3s;
-}
-
-.zona-ggb:hover,
-.zona-ggb.arrastrando {
-    border-color: #c3a5ff;
-    background: #392d50;
 }
 
 .icono-ggb {
@@ -229,11 +202,6 @@ button:disabled {
     margin-bottom: 5px;
 }
 
-.zona-ggb span:not(.icono-ggb) {
-    color: #bcaed2;
-    font-size: .9rem;
-}
-
 .btn-seleccionar {
     display: inline-block;
     margin-top: 18px;
@@ -244,11 +212,6 @@ button:disabled {
     font-weight: bold;
     cursor: pointer;
     transition: .3s;
-}
-
-.btn-seleccionar:hover {
-    background: linear-gradient(135deg, #b18cf5, #8969dc);
-    transform: translateY(-3px);
 }
 
 #nombreArchivo {
