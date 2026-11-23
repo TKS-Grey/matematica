@@ -1,28 +1,120 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>matematica</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Clasificador de funciones</title>
+    <link rel="stylesheet" href="syle.css">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <h3 id="estudiante">Identificacion del estudiante</h3>
-            <div class="nombe">
-                <span>Estudiante:</span>
-                <input type="text" name="estudiante" required autocapitalize="words" autocomplete="off">
+
+    <main class="contenedor">
+
+        <header>
+            <h1>Clasificador de funciones</h1>
+            <p class="intro">
+                Genera y clasifica funciones según sus coeficientes.
+                También puedes importar construcciones de GeoGebra.
+            </p>
+        </header>
+
+        <section class="coef">
+            <p>b = <output id="valorB">0</output></p>
+            <p>c = <output id="valorC">0</output></p>
+        </section>
+
+        <div class="botones">
+            <button id="generarBtn">Generar función</button>
+            <button id="copiarBtn" class="secundario">Copiar función</button>
+        </div>
+
+        <p class="formula" id="formula">f(x) = 0</p>
+        <p class="clasificacion" id="clasificacion">
+            Presiona generar para comenzar
+        </p>
+
+        <section class="cajas">
+
+            <article class="caja" id="cajaLineal">
+                <h2>Función lineal</h2>
+                <p id="textoLineal">
+                    Tiene la forma f(x) = bx, con b distinto de cero.
+                </p>
+            </article>
+
+            <article class="caja" id="cajaAfin">
+                <h2>Función afín</h2>
+                <p id="textoAfin">
+                    Tiene la forma f(x) = bx + c, con b y c distintos de cero.
+                </p>
+            </article>
+
+            <article class="caja" id="cajaConstante">
+                <h2>Función constante</h2>
+                <p id="textoConstante">
+                    Tiene la forma f(x) = c, con c distinto de cero.
+                </p>
+            </article>
+
+            <article class="caja" id="cajaNula">
+                <h2>Función nula xd</h2>
+                <p id="textoNula">
+                    Su resultado siempre es cero.
+                </p>
+            </article>
+        </section>
+        <p id="mensaje"></p>
+        <section class="seccion-ggb">
+            <h2>Importar construcción de GeoGebra</h2>
+
+            <p>
+                Selecciona o arrastra un archivo .ggb
+                para visualizar tu construcción.
+            </p>
+
+            <div class="zona-ggb" id="zonaGGB">
+                <span class="icono-ggb">📂</span>
+                <p>Arrastra tu archivo aquí</p>
+                <span>o selecciona uno desde tu dispositivo</span>
+
+                <input type="file" id="archivoGGB" accept=".ggb" hidden>
+                <label for="archivoGGB" class="btn-seleccionar">
+                    Seleccionar archivo
+                </label>
             </div>
-            <div class="nombe">
-                <span>Fecha:</span>
-                <input type="text" name="fecha" required autocapitalize="words" autocomplete="off">
-            </div> 
-            <div class="nombe">
-                <span>Curso:</span>
-                <input type="text" name="curso" required autocapitalize="words" autocomplete="off">
-            </div> 
-        </nav>
-    </header>
+            <p id="nombreArchivo">
+                Ningún archivo seleccionado
+            </p>
+            <button id="btnCargarGGB" disabled>
+                Cargar archivo
+            </button>
+            <p id="mensajeGGB"></p>
+        </section>
+
+        <section class="visor">
+            <h2>Visualización en GeoGebra</h2>
+            <p>
+                Aquí aparecerá tu construcción matemática.
+            </p>
+            <div id="ggb-element"></div>
+
+            <a id="geogebraLink" href="https://www.geogebra.org/classic?lang=es" target="_blank" rel="noopener noreferrer">
+                Abrir en GeoGebra
+            </a>
+        </section>
+
+        <footer class="enlaces">
+            <p>Proyecto educativo de funciones matemáticas</p>
+            <a href="https://www.geogebra.org/classic?lang=es"
+               target="_blank" rel="noopener">
+                GeoGebra Classic
+            </a>
+        </footer>
+
+    </main>
+
 </body>
 </html>
