@@ -1,11 +1,11 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-body {
+body{
     min-height: 100vh;
     padding: 35px 20px;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -13,7 +13,7 @@ body {
     color: #f3edff;
 }
 
-.contenedor {
+.contenedor{
     max-width: 1050px;
     margin: 0 auto;
     padding: 40px;
@@ -24,7 +24,7 @@ body {
     animation: aparecer .6s ease;
 }
 
-h1 {
+h1{
     text-align: center;
     color: #d7c2ff;
     font-size: 2.3rem;
@@ -32,14 +32,14 @@ h1 {
     letter-spacing: 1px;
 }
 
-.intro {
+.intro{
     text-align: center;
     color: #c1b4d8;
     font-size: 1.05rem;
     line-height: 1.7;
 }
 
-.coef {
+.coef{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +48,7 @@ h1 {
     margin: 35px 0;
 }
 
-.coef p {
+.coef p{
     padding: 17px 25px;
     background: #302746;
     border: 1px solid #594477;
@@ -56,27 +56,21 @@ h1 {
     color: #f0e8ff;
     font-size: 1.3rem;
     font-weight: 600;
-    transition: .3s;
 }
 
-.coef p:hover {
-    transform: translateY(-4px);
-    border-color: #b99aff;
-}
-
-output {
+output{
     color: #f0a6df;
     font-weight: bold;
 }
 
-.botones {
+.botones{
     display: flex;
     justify-content: center;
     gap: 12px;
     flex-wrap: wrap;
 }
 
-button {
+button{
     padding: 14px 25px;
     border: none;
     border-radius: 12px;
@@ -89,18 +83,18 @@ button {
     box-shadow: 0 5px 15px rgba(155, 117, 232, .2);
 }
 
-button:disabled {
+button:disabled{
     opacity: .4;
     cursor: not-allowed;
 }
 
-.secundario {
+.secundario{
     background: #49395e;
     box-shadow: none;
 }
 
 .formula,
-.clasificacion {
+.clasificacion{
     text-align: center;
     font-size: 1.3rem;
     font-weight: bold;
@@ -112,14 +106,14 @@ button:disabled {
     color: #f1e9ff;
 }
 
-.cajas {
+.cajas{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
     margin-top: 30px;
 }
 
-.caja {
+.caja{
     min-height: 170px;
     padding: 25px;
     background: #2a223e;
@@ -130,34 +124,34 @@ button:disabled {
     transition: .3s ease;
 }
 
-.caja:hover {
+.caja:hover{
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
 }
 
-.caja h2 {
+.caja h2{
     text-align: center;
     color: #d7c2ff;
     font-size: 1.3rem;
     margin-bottom: 18px;
 }
 
-.caja.activa {
+.caja.activa{
     background: #243a39;
     border: 2px solid #55c6a5;
     box-shadow: 0 0 18px rgba(85, 198, 165, .12);
 }
 
-.caja.activa h2 {
+.caja.activa h2{
     color: #7ce0c2;
 }
 
-.caja.inactiva {
+.caja.inactiva{
     opacity: .45;
 }
 
 #mensaje,
-#mensajeGGB {
+#mensajeGGB{
     margin-top: 20px;
     text-align: center;
     color: #7ce0c2;
