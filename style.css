@@ -1,3 +1,4 @@
+/* Reinicio básico de márgenes, rellenos, modelo de caja y subrayado de enlaces */
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     text-decoration: none;
 }
 
+/* Fondo degradado oscuro, tipografía y altura mínima de pantalla */
 body{
     min-height: 100vh;
     padding: 35px 20px;
@@ -13,6 +15,7 @@ body{
     color: #f3edff;
 }
 
+/* Tarjeta contenedora principal centrada */
 .contenedor{
     max-width: 1050px;
     margin: 0 auto;
@@ -24,6 +27,7 @@ body{
     animation: aparecer .6s ease;
 }
 
+/* Título principal */
 h1{
     text-align: center;
     color: #d7c2ff;
@@ -32,6 +36,7 @@ h1{
     letter-spacing: 1px;
 }
 
+/* Texto introductorio */
 .intro{
     text-align: center;
     color: #c1b4d8;
@@ -39,6 +44,7 @@ h1{
     line-height: 1.7;
 }
 
+/* Distribución flexible de los cuadros de coeficientes b y c */
 .coef{
     display: flex;
     align-items: center;
@@ -48,6 +54,7 @@ h1{
     margin: 35px 0;
 }
 
+/* Estilo de cada cuadro de coeficiente */
 .coef p{
     padding: 17px 25px;
     background: #302746;
@@ -58,11 +65,13 @@ h1{
     font-weight: 600;
 }
 
+/* Color destacado para los valores numéricos de b y c */
 output{
     color: #f0a6df;
     font-weight: bold;
 }
 
+/* Contenedor de botones de acción */
 .botones{
     display: flex;
     justify-content: center;
@@ -70,6 +79,7 @@ output{
     flex-wrap: wrap;
 }
 
+/* Estilo base de los botones */
 button{
     padding: 14px 25px;
     border: none;
@@ -83,16 +93,19 @@ button{
     box-shadow: 0 5px 15px rgba(155, 117, 232, .2);
 }
 
+/* Apariencia de botones deshabilitados */
 button:disabled{
     opacity: .4;
     cursor: not-allowed;
 }
 
+/* Variante secundaria para el botón de copiar */
 .secundario{
     background: #49395e;
     box-shadow: none;
 }
 
+/* Cajas destacadas para mostrar la fórmula y su clasificación */
 .formula,
 .clasificacion{
     text-align: center;
@@ -106,6 +119,7 @@ button:disabled{
     color: #f1e9ff;
 }
 
+/* Cuadrícula de 2 columnas para las tarjetas de tipos de función */
 .cajas{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -113,6 +127,7 @@ button:disabled{
     margin-top: 30px;
 }
 
+/* Tarjeta individual de clasificación */
 .caja{
     min-height: 170px;
     padding: 25px;
@@ -124,11 +139,13 @@ button:disabled{
     transition: .3s ease;
 }
 
+/* Elevación y sombra al pasar el cursor sobre una tarjeta */
 .caja:hover{
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
 }
 
+/* Título de cada tarjeta */
 .caja h2{
     text-align: center;
     color: #d7c2ff;
@@ -136,20 +153,24 @@ button:disabled{
     margin-bottom: 18px;
 }
 
+/* Estilo resaltado para la tarjeta que coincide con la función actual */
 .caja.activa{
     background: #243a39;
     border: 2px solid #55c6a5;
     box-shadow: 0 0 18px rgba(85, 198, 165, .12);
 }
 
+/* Color del título en la tarjeta activa */
 .caja.activa h2{
     color: #7ce0c2;
 }
 
+/* Atenúa las tarjetas que no corresponden a la función actual */
 .caja.inactiva{
     opacity: .45;
 }
 
+/* Mensajes de retroalimentación al usuario */
 #mensaje,
 #mensajeGGB{
     margin-top: 20px;
@@ -160,6 +181,7 @@ button:disabled{
 }
 
 /* ===== SECCIÓN Geggebra (el profe permitio hacer esto con ia) ===== */
+/* Contenedor de la sección para importar archivos .ggb */
 .seccion-ggb {
     margin-top: 35px;
     padding: 28px;
@@ -169,6 +191,7 @@ button:disabled{
     text-align: center;
 }
 
+/* Títulos de las secciones de importación y visor */
 .seccion-ggb h2,
 .visor h2 {
     color: #d7c2ff;
@@ -176,6 +199,7 @@ button:disabled{
     margin-bottom: 12px;
 }
 
+/* Área punteada para arrastrar y soltar archivos */
 .zona-ggb {
     padding: 30px 15px;
     border: 2px dashed #8065aa;
@@ -184,18 +208,21 @@ button:disabled{
     transition: .3s;
 }
 
+/* Ícono de carpeta sobre la zona de carga */
 .icono-ggb {
     display: block;
     font-size: 2.5rem;
     margin-bottom: 12px;
 }
 
+/* Texto principal dentro de la zona de carga */
 .zona-ggb p {
     color: #f0e8ff;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
+/* Botón tipo etiqueta para abrir el selector de archivos */
 .btn-seleccionar {
     display: inline-block;
     margin-top: 18px;
@@ -208,12 +235,14 @@ button:disabled{
     transition: .3s;
 }
 
+/* Texto con el nombre del archivo seleccionado */
 #nombreArchivo {
     margin: 18px 0;
     color: #d7c2ff;
     overflow-wrap: anywhere;
 }
 
+/* Contenedor de la sección del visor de GeoGebra */
 .visor {
     margin-top: 35px;
     padding: 28px;
@@ -223,6 +252,7 @@ button:disabled{
     text-align: center;
 }
 
+/* Dimensiones y bordes del contenedor donde se monta GeoGebra */
 #ggb-element {
     width: 100%;
     min-height: 450px;
@@ -231,6 +261,7 @@ button:disabled{
     border-radius: 12px;
 }
 
+/* Botón/enlace para abrir la función en GeoGebra Classic */
 #geogebraLink {
     display: inline-block;
     margin: 15px 0;
@@ -242,11 +273,13 @@ button:disabled{
     transition: .3s;
 }
 
+/* Efecto hover del enlace a GeoGebra */
 #geogebraLink:hover {
     background: linear-gradient(135deg, #39b99b, #208c78);
     transform: translateY(-3px);
 }
 
+/* Pie de página con separador superior */
 .enlaces {
     margin-top: 35px;
     padding-top: 22px;
@@ -256,11 +289,13 @@ button:disabled{
     color: #c1b4d8;
 }
 
+/* Enlaces dentro del pie de página */
 .enlaces a {
     color: #d7c2ff;
     font-weight: 600;
 }
 
+/* Cambio de color y subrayado al pasar el cursor por los enlaces del pie */
 .enlaces a:hover {
     color: #f0a6df;
     text-decoration: underline;
