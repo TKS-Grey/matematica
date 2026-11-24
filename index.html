@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clasificador de funciones</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Librería oficial de GeoGebra para incrustar el applet -->
     <script src="https://www.geogebra.org/apps/deployggb.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Contenedor principal centrado -->
     <main class="contenedor">
+        <!-- Encabezado con título y descripción -->
         <header>
             <h1>Clasificador de funciones</h1>
             <p class="intro">
@@ -18,22 +21,27 @@
             </p>
         </header>
 
+        <!-- Muestra los valores actuales de los coeficientes b y c -->
         <section class="coef">
             <p>b = <output id="valorB">0</output></p>
             <p>c = <output id="valorC">0</output></p>
         </section>
 
+        <!-- Botones de acción para generar y copiar la fórmula -->
         <div class="botones">
             <button id="generarBtn">Generar función</button>
             <button id="copiarBtn" class="secundario">Copiar función</button>
         </div>
+        <!-- Fórmula generada y la etiqueta de clasificación actual -->
         <p class="formula" id="formula">f(x) = 0</p>
         <p class="clasificacion" id="clasificacion">
             Presiona generar para comenzar
         </p>
 
+        <!-- Tarjetas para los 4 tipos de funciones -->
         <section class="cajas">
 
+            <!-- función lineal (b != 0, c = 0) -->
             <article class="caja" id="cajaLineal">
                 <h2>Función lineal</h2>
                 <p id="textoLineal">
@@ -41,6 +49,7 @@
                 </p>
             </article>
 
+            <!-- función afín (b != 0, c != 0) -->
             <article class="caja" id="cajaAfin">
                 <h2>Función afín</h2>
                 <p id="textoAfin">
@@ -48,6 +57,7 @@
                 </p>
             </article>
 
+            <!-- unción constante (b = 0, c != 0) -->
             <article class="caja" id="cajaConstante">
                 <h2>Función constante</h2>
                 <p id="textoConstante">
@@ -55,6 +65,7 @@
                 </p>
             </article>
 
+            <!-- función nula (b = 0, c = 0) -->
             <article class="caja" id="cajaNula">
                 <h2>Función nula</h2>
                 <p id="textoNula">
@@ -62,7 +73,9 @@
                 </p>
             </article>
         </section>
+        <!-- Mensaje general o de copia al portapapeles -->
         <p id="mensaje"></p>
+        <!-- Sección para seleccionar o arrastrar archivos .ggb -->
         <section class="seccion-ggb">
             <h2>Importar construcción de GeoGebra</h2>
 
@@ -71,36 +84,45 @@
                 para visualizar tu construcción.
             </p>
 
+            <!-- Área de arrastrar y soltar (drag & drop) y selección manual -->
             <div class="zona-ggb" id="zonaGGB">
                 <span class="icono-ggb">📂</span>
                 <p>Arrastra tu archivo aquí</p>
                 <span>o selecciona uno desde tu dispositivo</span>
 
+                <!-- Input de archivo oculto; se activa mediante el label -->
                 <input type="file" id="archivoGGB" accept=".ggb" hidden>
                 <label for="archivoGGB" class="btn-seleccionar">
                     Seleccionar archivo
                 </label>
             </div>
+            <!-- Nombre del archivo elegido -->
             <p id="nombreArchivo">
                 Ningún archivo seleccionado
             </p>
+            <!-- Botón deshabilitado hasta elegir un archivo .ggb válido -->
             <button id="btnCargarGGB" disabled>
                 Cargar archivo
             </button>
+            <!-- Mensajes de estado de la carga de archivos -->
             <p id="mensajeGGB"></p>
         </section>
 
+        <!-- Visor gráfico interactivo de GeoGebra y enlace directo -->
         <section class="visor">
             <h2>Visualización en GeoGebra</h2>
             <p>
                 Aquí aparecerá tu construcción matemática.
             </p>
+            <!-- Contenedor donde se inyecta el applet de GeoGebra -->
             <div id="ggb-element"></div>
+            <!-- Enlace dinámico para abrir la función en GeoGebra Classic -->
             <a id="geogebraLink" href="https://www.geogebra.org/classic?lang=es" target="_blank" rel="noopener noreferrer">
                 Abrir en GeoGebra
             </a>
         </section>
 
+        <!-- Pie de la pagina con el enlace a geogebra externo -->
         <footer class="enlaces">
             <a href="https://www.geogebra.org/classic?lang=es"
                target="_blank" rel="noopener">
